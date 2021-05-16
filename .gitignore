@@ -1,0 +1,7 @@
+# Omit the following:
+# Compiled Class Files
+*.class
+
+# Eclipse data
+.classpath
+.project
