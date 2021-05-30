@@ -4,6 +4,22 @@
 
 Java implementations of some important data structures and their critical functionalities, along with unit tests.
 
+### Hash Map
+
+**Hash_Map.java**
+
+At initialization, this class creates new array with specified number of buckets/bins. Keys are hashed with Java Object Class's built in hash function (a next step in the development of this implentation could be a unique and original hashing function) The appropriate bucket in the array is identified based on the hash result. New pairs are added to the structure as nodes, and chained to existing node(s) in a linked list manner in case of a collision.
+
+The Hash_Map class contains the following public methods:
+ * *put(key, value)* - Adds a new <key, value> pair to the map. Hashes the key and identifies appropriate bucket in array. If array index is null, adds new node, if nodes already exist, chains new node to end of linked list. In case where key/hash value already exist, put() replaces the existing value with new one.
+ * *getValue(key)* - Returns value associated with given key. If key does not exist in map, returns null. Achieves this by hashing key and traversing linked list at appropriate array index.
+ * *delete(key)* - Delete <key, value> pair from hash map. Achieves this by hashing key, traversing linked list at appropriate array index, and updating pointers to bypass deleted node.
+ * *return_contents()* - For testing purposes, returns list of keys in hash map. Used to verify length and contents. 
+
+**Hash_Map_Unit_Tests.java**
+
+A number of unit tests in Java's JUnit framework to isolate the performance of the methods in the Hash_Map class.
+
 ### Dynamic Resizable Array
 
 **Dynamic_Array.java**
